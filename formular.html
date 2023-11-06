@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formular til grønne drømme</title>
+    <meta
+      name="description"
+      content="Udfyld vores kontaktformular og del dine spørgsmål eller forslag. Hos Grønne Drømme er vi passionerede omkring haveentusiaster og planter. Vi står klar til at besvare dine spørgsmål og modtage dine forslag om nye planter til vores database. Sammen kan vi dyrke en grønnere fremtid. Indsend din besked og kontaktinformation nu."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="./img/headerbilled.jpg" alt="" class="headerimg"
+      /></a>
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">Grønsager</button>
+          <div class="dropdown-content">
+            <a href="boennebluelake.html">Bønne</a>
+            <a href="aertalderman.html">Ært</a>
+            <a href="basilikum.html">Basilikum</a>
+          </div>
+        </div>
+
+        <button onclick="window.location.href='index.html';">Forside</button>
+        <button onclick="window.location.href='formular.html';">kontakt</button>
+      </nav>
+    </header>
+    <h1>Kontakt os</h1>
+
+    <form action="./kontaktlanding.html" method="POST">
+      <div>
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" required />
+      </div>
+      <div>
+        <label for="email">E-mail adresse:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="besked">Besked:</label>
+        <textarea
+          id="besked"
+          name="besked"
+          placeholder="Skriv din besked her"
+        ></textarea>
+      </div>
+      <div>
+        <input type="checkbox" id="nyPlanteCheckbox" name="nyPlanteCheckbox" />
+        <label for="nyPlante">Ny plante til databasen</label>
+      </div>
+      <div id="skjulteFelter">
+        <div>
+          <label for="plantensDanskeNavn">Plantens danske navn:</label>
+          <input
+            type="text"
+            id="plantensDanskeNavn"
+            name="plantensDanskeNavn"
+          />
+        </div>
+        <div>
+          <label for="plantensVariant">Plantens variant:</label>
+          <input type="text" id="plantensVariant" name="plantensVariant" />
+        </div>
+        <div>
+          <label for="plantensBotaniskeNavn">Plantens botaniske navn:</label>
+          <input
+            type="text"
+            id="plantensBotaniskeNavn"
+            name="plantensBotaniskeNavn"
+          />
+        </div>
+        <div>
+          <label for="plantensType">Plantens type:</label>
+          <input type="text" id="plantensType" name="plantensType" />
+        </div>
+        <div>
+          <label for="plantensHøjde">Plantens højde i cm:</label>
+          <input type="number" id="plantensHøjde" name="plantensHøjde" />
+        </div>
+        <div>
+          <label for="plantensRækkeafstand">Plantens rækkeafstand i cm:</label>
+          <input
+            type="number"
+            id="plantensRækkeafstand"
+            name="plantensRækkeafstand"
+          />
+        </div>
+        <div>
+          <label for="plantensSådybde">Plantens sådybde i cm:</label>
+          <input type="number" id="plantensSådybde" name="plantensSådybde" />
+        </div>
+        <div>
+          <label for="plantensLysforhold">Plantens lysforhold:</label>
+          <select id="plantensLysforhold" name="plantensLysforhold">
+            <option value="solrigt">Solrigt</option>
+            <option value="skygge">Skygge</option>
+            <option value="delvis-skygge">Delvis skygge</option>
+          </select>
+        </div>
+        <div>
+          <label for="plantenForspires">Planten forspires i:</label>
+          <select id="plantenForspires" name="plantenForspires">
+            <option value="inde">Inde</option>
+            <option value="ude">Ude</option>
+            <!-- Tilføj flere muligheder efter behov -->
+          </select>
+        </div>
+        <div>
+          <label for="plantenUdplantes">Planten udplantes i:</label>
+          <select id="plantenUdplantes" name="plantenUdplantes">
+            <option value="havebed">Havebed</option>
+            <option value="potte">Potte</option>
+            <!-- Tilføj flere muligheder efter behov -->
+          </select>
+        </div>
+        <div>
+          <label for="plantenSpirerEfter">Planten spirer efter ca.:</label>
+          <input
+            type="number"
+            id="plantenSpirerEfter"
+            name="plantenSpirerEfter"
+          />
+        </div>
+        <div>
+          <label for="plantenKlarTilHøst"
+            >Planten er klar til høst efter ca.:</label
+          >
+          <input
+            type="number"
+            id="plantenKlarTilHøst"
+            name="plantenKlarTilHøst"
+          />
+        </div>
+        <div>
+          <label for="plantebeskrivelse">Plantebeskrivelse:</label>
+          <textarea
+            id="plantebeskrivelse"
+            name="plantebeskrivelse"
+            placeholder="Skriv plantebeskrivelse her"
+          ></textarea>
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Indsend" />
+      </div>
+    </form>
+    <script>
+      // Hent referencer til elementer
+      var nyPlanteCheckbox = document.getElementById("nyPlanteCheckbox");
+      var skjulteFelter = document.getElementById("skjulteFelter");
+
+      // Lyt efter ændringer i checkboksen
+      nyPlanteCheckbox.addEventListener("change", function () {
+        // Hvis checkboksen er markeret, vis de skjulte felter; ellers skjul dem
+        if (nyPlanteCheckbox.checked) {
+          skjulteFelter.style.display = "block";
+        } else {
+          skjulteFelter.style.display = "none";
+        }
+      });
+    </script>
+
+    <footer>
+      <p>© Grønne Drømme 2021</p>
+    </footer>
+  </body>
+</html>
